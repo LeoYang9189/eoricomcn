@@ -1,0 +1,300 @@
+{
+  "nav": {
+    "home": "Home",
+    "applyEORI": "Apply EORI",
+    "whatEORI": "What's EORI?",
+    "track": "Track",
+    "login": "Login",
+    "register": "Register",
+    "about": "About Us"
+  },
+  "auth": {
+    "register": {
+      "title": "Register Account",
+      "companyName": "Company Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Login Now",
+      "passwordMismatch": "Passwords do not match",
+      "failed": "Registration failed",
+      "error": "System error, please try again later"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "failed": "Login failed",
+      "error": "System error, please try again later"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Fast & Easy EORI Registration",
+      "subtitle": "Professional team provides one-stop EORI registration service for your European trade journey",
+      "button": "Apply Now"
+    },
+    "features": {
+      "title": "Our Services",
+      "subtitle": "Professional Team, Comprehensive Service System",
+      "professional": {
+        "title": "Professional Service",
+        "desc": "Experienced team provides professional registration service",
+        "benefits": [
+          "One-on-one professional service",
+          "Expert guidance throughout",
+          "Document review and verification",
+          "Compliance assurance"
+        ]
+      },
+      "fast": {
+        "title": "Fast Processing",
+        "desc": "Efficient process, complete registration in as fast as 3 working days",
+        "benefits": [
+          "3-5 working days processing",
+          "Online document submission",
+          "Quick response",
+          "Real-time updates"
+        ]
+      },
+      "tracking": {
+        "title": "Full Tracking",
+        "desc": "Track application progress online in real-time",
+        "benefits": [
+          "Full progress tracking",
+          "Real-time status notifications",
+          "Online tracking system",
+          "Timely feedback"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let us help you obtain your EORI number quickly",
+      "button": "Apply Now"
+    },
+    "whyUs": {
+      "title": "Why Choose Us",
+      "subtitle": "Professional & Reliable EORI Registration Service Provider",
+      "reasons": [
+        {
+          "number": "8+ Years",
+          "title": "Experience",
+          "desc": "Years of expertise in EORI services"
+        },
+        {
+          "number": "100%",
+          "title": "Success Rate",
+          "desc": "Professional team ensures success"
+        },
+        {
+          "number": "3-5 Days",
+          "title": "Processing",
+          "desc": "Fast and efficient process"
+        },
+        {
+          "number": "24/7",
+          "title": "Support",
+          "desc": "Always ready to help"
+        }
+      ]
+    },
+    "process": {
+      "title": "Application Process",
+      "subtitle": "Four simple steps to obtain your EORI",
+      "steps": [
+        {
+          "title": "Online Registration",
+          "desc": "Create account and submit basic info"
+        },
+        {
+          "title": "Document Preparation",
+          "desc": "Prepare required documents"
+        },
+        {
+          "title": "Submit Application",
+          "desc": "Professional review and submission"
+        },
+        {
+          "title": "Get EORI",
+          "desc": "Complete in 3-5 working days"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Us",
+      "phone": "+86 400-888-8888",
+      "email": "contact@eori-service.com"
+    },
+    "links": {
+      "title": "Quick Links",
+      "home": "Home",
+      "about": "About Us",
+      "apply": "Apply Now"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekday": "Mon-Fri: 9:00-18:00",
+      "weekend": "Weekend: Closed"
+    },
+    "social": {
+      "title": "Follow Us",
+      "wechat": "WeChat",
+      "linkedin": "LinkedIn"
+    },
+    "copyright": {
+      "company": "EORI Service Center",
+      "rights": "All Rights Reserved"
+    }
+  },
+  "about": {
+    "seo": {
+      "title": "About EORI - Detailed Guide to EU Economic Operator Registration and Identification",
+      "description": "Learn about EORI importance, application process, and FAQs.",
+      "keywords": "EORI guide,EORI importance,EORI application process,EU trade,EORI FAQ"
+    },
+    "what": {
+      "title": "What is EORI?",
+      "subtitle": "Understanding EU Economic Operator Registration and Identification",
+      "desc1": "EORI (Economic Operators Registration and Identification number) is a mandatory requirement for businesses engaged in trade activities within the European Union.",
+      "desc2": "It serves as a unique identifier throughout the EU, used to identify economic operators in their dealings with customs authorities and other government agencies.",
+      "keyPoints": "Key Points",
+      "points": [
+        "Mandatory requirement for EU import/export activities",
+        "Valid across all EU member states",
+        "Simplifies customs procedures",
+        "Enhances trade efficiency and security",
+        "Facilitates customs system integration"
+      ]
+    },
+    "why": {
+      "title": "Why Do You Need EORI?",
+      "reasons": [
+        {
+          "title": "Compliance",
+          "desc": "According to EU regulations, all economic operators involved in EU trade must have an EORI number"
+        },
+        {
+          "title": "Customs Clearance",
+          "desc": "EORI significantly simplifies customs procedures and reduces cargo detention time"
+        },
+        {
+          "title": "Risk Management",
+          "desc": "Helps businesses better manage trade risks and improve supply chain predictability"
+        }
+      ]
+    },
+    "process": {
+      "title": "Application Process",
+      "steps": [
+        {
+          "title": "Document Preparation",
+          "desc": "Including company registration documents, legal representative ID, and other required materials"
+        },
+        {
+          "title": "Submit Application",
+          "desc": "Submit through our professional team to ensure accuracy and completeness"
+        },
+        {
+          "title": "Review Process",
+          "desc": "EU customs authorities review the application, typically taking 3-5 working days"
+        },
+        {
+          "title": "Obtain EORI",
+          "desc": "EORI number is issued upon approval and can be used immediately"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "How long is an EORI number valid?",
+          "a": "EORI numbers are valid indefinitely unless there are significant changes to company information or voluntary cancellation"
+        },
+        {
+          "q": "Is EORI required for all EU trade?",
+          "a": "Yes, EORI is required for all import/export activities within the EU"
+        },
+        {
+          "q": "How can I verify an EORI number?",
+          "a": "EORI numbers can be verified through the official EU EORI validation system"
+        }
+      ]
+    }
+  },
+  "track": {
+    "title": "Track Application",
+    "subtitle": "Enter your application ID to check current status",
+    "applicationId": "Application ID",
+    "placeholder": "Please enter your application ID",
+    "submit": "Track Now"
+  },
+  "application": {
+    "title": "EORI Application Form",
+    "steps": {
+      "company": "Company Info",
+      "contact": "Contact Info",
+      "business": "Business Info",
+      "documents": "Documents"
+    },
+    "fields": {
+      "companyName": "Company Name",
+      "registrationNumber": "Registration No.",
+      "vatNumber": "VAT Number",
+      "address": "Company Address",
+      "country": "Country/Region",
+      "city": "City",
+      "postalCode": "Postal Code",
+      "contactName": "Contact Name",
+      "contactPosition": "Position",
+      "contactEmail": "Email",
+      "contactPhone": "Phone",
+      "businessType": "Business Type",
+      "importExportVolume": "Import/Export Volume",
+      "mainProducts": "Main Products",
+      "targetCountries": "Target Countries"
+    },
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit Application"
+  },
+  "validation": {
+    "title": "EORI Validation",
+    "subtitle": "Validate EORI numbers using the official EU interface",
+    "placeholder": "Enter EORI number",
+    "submit": "Validate",
+    "validating": "Validating...",
+    "result": {
+      "title": "Validation Result",
+      "eori": "EORI Number",
+      "status": "Status",
+      "name": "Company Name",
+      "address": "Address",
+      "country": "Country",
+      "valid": "Valid",
+      "invalid": "Invalid",
+      "copy": "Copy"
+    },
+    "error": {
+      "empty": "EORI number cannot be empty",
+      "format": "Invalid EORI number format",
+      "service": "Service temporarily unavailable, please try again later"
+    },
+    "features": {
+      "official": "Official Validation",
+      "fast": "Fast Response",
+      "secure": "Secure & Reliable"
+    },
+    "hero": {
+      "title": "Professional EORI Validation System",
+      "subtitle": "Supporting Cross-border Trade",
+      "description": "Fast and accurate validation of EORI numbers using the official EU interface, ensuring smooth cross-border trade operations"
+    }
+  }
+} 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="euBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003399;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#003399;stop-opacity:0.1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 欧盟成员国 -->
+  <g fill="url(#euBlue)" stroke="#003399" stroke-width="1" filter="url(#glow)">
+    <!-- 法国 -->
+    <path d="M340,280 L380,270 L390,290 L385,320 L360,330 L340,310 Z"/>
+    
+    <!-- 德国 -->
+    <path d="M400,250 L440,240 L450,270 L440,290 L410,295 L390,280 Z"/>
+    
+    <!-- 意大利 -->
+    <path d="M410,300 L430,290 L460,310 L470,340 L450,360 L420,350 L410,320 Z"/>
+    
+    <!-- 西班牙 -->
+    <path d="M300,310 L340,300 L350,330 L340,350 L310,360 L290,340 Z"/>
+    
+    <!-- 波兰 -->
+    <path d="M450,240 L490,230 L500,260 L490,280 L460,285 L450,270 Z"/>
+    
+    <!-- 其他欧盟国家... -->
+  </g>
+
+  <!-- 非欧盟国家（浅色） -->
+  <g fill="#f0f0f0" stroke="#ccc" stroke-width="1">
+    <!-- 英国 -->
+    <path d="M320,220 L340,210 L350,230 L340,250 L320,240 Z"/>
+    
+    <!-- 挪威 -->
+    <path d="M400,180 L440,170 L450,200 L440,220 L410,225 L400,210 Z"/>
+    
+    <!-- 瑞士 -->
+    <path d="M380,290 L390,285 L400,295 L390,305 L380,300 Z"/>
+    
+    <!-- 其他非欧盟国家... -->
+  </g>
+
+  <!-- 装饰性元素 -->
+  <g>
+    <!-- 主要城市点 -->
+    <circle cx="370" cy="285" r="2" fill="#003399"/>
+    <circle cx="420" cy="260" r="2" fill="#003399"/>
+    <circle cx="440" cy="320" r="2" fill="#003399"/>
+    
+    <!-- 连接线 -->
+    <g stroke="#003399" stroke-width="0.5" opacity="0.3">
+      <path d="M370,285 L420,260"/>
+      <path d="M420,260 L440,320"/>
+      <path d="M370,285 L440,320"/>
+    </g>
+  </g>
+
+  <!-- 图例 -->
+  <g transform="translate(50,500)">
+    <rect width="20" height="10" fill="url(#euBlue)" stroke="#003399"/>
+    <text x="30" y="9" font-size="12" fill="#666">EU Member States</text>
+    
+    <rect x="150" width="20" height="10" fill="#f0f0f0" stroke="#ccc"/>
+    <text x="180" y="9" font-size="12" fill="#666">Non-EU Countries</text>
+  </g>
+</svg> 

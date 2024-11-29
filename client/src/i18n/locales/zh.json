@@ -1,0 +1,374 @@
+{
+  "nav": {
+    "home": "首页",
+    "applyEORI": "立即申请",
+    "whatEORI": "EORI介绍",
+    "track": "查询申请进度",
+    "validation": "验证有效性",
+    "about": "关于我们",
+    "login": "登录",
+    "register": "注册"
+  },
+  "common": {
+    "buttons": {
+      "submit": "提交",
+      "next": "下一步",
+      "back": "返回",
+      "login": "登录",
+      "register": "注册",
+      "track": "查询"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "快速便捷的EORI注册服务",
+      "subtitle": "专业团队提供一站式EORI注册服务，让您的欧洲贸易之路更加顺畅",
+      "button": "立即申请"
+    },
+    "features": {
+      "title": "我们的服务优势",
+      "subtitle": "专业的团队，完善的服务体系",
+      "professional": {
+        "title": "专业服务",
+        "desc": "经验丰富的团队提供专业的注册服务",
+        "benefits": [
+          "专业团队一对一服务",
+          "资深顾问全程导",
+          "材料审核把关",
+          "合规性障"
+        ]
+      },
+      "fast": {
+        "title": "快速处理",
+        "desc": "高效的处理流程，最快3个工作日完成注册",
+        "benefits": [
+          "3-5个工作日快速办理",
+          "在线提交材料",
+          "快速响应",
+          "进度实时更新"
+        ]
+      },
+      "tracking": {
+        "title": "全程跟踪",
+        "desc": "在线查询申请进度，实时了解注册状态",
+        "benefits": [
+          "全程进度跟踪",
+          "状态实时通知",
+          "在线查询系统",
+          "问题及时反馈"
+        ]
+      }
+    },
+    "whyUs": {
+      "title": "为什么选择我们",
+      "subtitle": "专业可靠的EORI注册服务提供商",
+      "reasons": [
+        {
+          "number": "8年+",
+          "title": "行业经验",
+          "desc": "深耕EORI注册服务多年"
+        },
+        {
+          "number": "100%",
+          "title": "成功率",
+          "desc": "专业团队保障申请成功"
+        },
+        {
+          "number": "3-5天",
+          "title": "处理时间",
+          "desc": "快速高效的办理流程"
+        },
+        {
+          "number": "24/7",
+          "title": "在线服务",
+          "desc": "随时响应客户需求"
+        }
+      ]
+    },
+    "process": {
+      "title": "申请流程",
+      "subtitle": "简单四步，轻松获取EORI",
+      "steps": [
+        {
+          "title": "在线注册",
+          "desc": "创建账号并提交基本信息"
+        },
+        {
+          "title": "材料准备",
+          "desc": "根据要求准备相关文件"
+        },
+        {
+          "title": "提交申请",
+          "desc": "专业团队审核并提交"
+        },
+        {
+          "title": "获取EORI",
+          "desc": "3-5个工作日完成注册"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "subtitle": "让我们帮助您快速获取EORI号码",
+      "button": "立即申请"
+    }
+  },
+  "application": {
+    "title": "EORI申请表",
+    "steps": {
+      "company": "公司信息",
+      "contact": "联系人信息",
+      "business": "业务信息",
+      "documents": "文件上传"
+    },
+    "fields": {
+      "companyName": "公司名称",
+      "registrationNumber": "注册号",
+      "vatNumber": "增值税号",
+      "address": "公司地址",
+      "country": "国家/地区",
+      "city": "城市",
+      "postalCode": "邮政编码",
+      "contactName": "联系人姓名",
+      "contactPosition": "职",
+      "contactEmail": "电子邮箱",
+      "contactPhone": "联系电话",
+      "businessType": "业务类型",
+      "importExportVolume": "进出口规模",
+      "mainProducts": "主要产品",
+      "targetCountries": "目标国家"
+    },
+    "next": "下一步",
+    "back": "上一步",
+    "submit": "提交申请"
+  },
+  "track": {
+    "title": "查询申请进度",
+    "subtitle": "输入申请编号查看当前处理状态",
+    "applicationId": "申请编号",
+    "placeholder": "请输入您的申请编号",
+    "submit": "立即查询"
+  },
+  "about": {
+    "what": {
+      "title": "什么是EORI？",
+      "subtitle": "了解欧盟经济运营商注册识别号",
+      "desc1": "EORI（Economic Operators Registration and Identification number）是欧盟经济运营商注册识别号，是在欧盟进行贸易活动的必要条件。",
+      "desc2": "这是一个在整个欧盟范围内通用的唯一识别码，用于识别与海关当局和其他政府机进行业务往来的经运营商。",
+      "keyPoints": "关键要点",
+      "points": [
+        "在欧盟进行进出口贸易的必要条件",
+        "适用于所有欧盟成员国",
+        "有助于简化通关程序",
+        "提高贸易效率和安全性",
+        "便于与海关系统对接"
+      ]
+    },
+    "why": {
+      "title": "为什么需要EORI？",
+      "reasons": [
+        {
+          "title": "合规要求",
+          "desc": "根据欧盟法规，所有参与欧盟贸易的经济运营商都必须持有EORI号码"
+        },
+        {
+          "title": "便利通关",
+          "desc": "EORI可以显著简化通关流程，减少货物在海关的滞留时间"
+        },
+        {
+          "title": "风险管理",
+          "desc": "有助于企业更好地管理贸易风险，提高供应链的可预测性"
+        }
+      ]
+    },
+    "process": {
+      "title": "申请流程",
+      "steps": [
+        {
+          "title": "准备材料",
+          "desc": "包括公司注册文件、法人身份证明等必要文件"
+        },
+        {
+          "title": "提交申请",
+          "desc": "通过我们的专业团队提交申请，确保信息准确完整"
+        },
+        {
+          "title": "审核处理",
+          "desc": "欧盟海关部门进行审核，一般需要3-5个工作日"
+        },
+        {
+          "title": "取EORI",
+          "desc": "审核通过后即可获得EORI号码，可立即使用"
+        }
+      ]
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "q": "EORI号码的有效期是多久？",
+          "a": "EORI号码长期有效，除非公司信息发生重大变更或主动申请注销"
+        },
+        {
+          "q": "是否所有欧盟贸易都需要EORI？",
+          "a": "是的，只要涉及欧盟的进出口贸易，都需要EORI号码"
+        },
+        {
+          "q": "如何查询EORI的有效性？",
+          "a": "可以通过欧盟官方EORI查询系统进行验证"
+        }
+      ]
+    },
+    "seo": {
+      "title": "关于我们 - 专业的EORI注册服务提供商",
+      "description": "了解我们的专业团队、服务优势和成功案例",
+      "keywords": "EORI注册,欧盟贸易,专业服务,团队介绍"
+    },
+    "company": {
+      "title": "专业的EORI注册服务提供商",
+      "subtitle": "致力于为中国企业提供高效、便捷的EORI注册服务",
+      "intro": {
+        "title": "公司介绍",
+        "content": [
+          "我们是一家专注于EORI注册服务的专业机构，拥有多年的盟贸易服务经验。",
+          "团队由资深的贸易专家和法律顾问组成，为数千家企业成功办理了EORI注册。",
+          "我们始终秉持专业、高效、诚信的服务理念，致力于为客户提供最优质的服务体验。"
+        ]
+      }
+    },
+    "advantages": {
+      "title": "我们的优势",
+      "subtitle": "为什么选择我们的服务",
+      "items": [
+        {
+          "title": "专业团队",
+          "description": "拥有多年欧盟贸易经验的专业团队，提供一站式服务"
+        },
+        {
+          "title": "快速高效",
+          "description": "标准化的服务流程，3-5个工作日即可完成注册"
+        },
+        {
+          "title": "全程跟踪",
+          "description": "专属客服一对一服务，实时跟进申请进度"
+        }
+      ]
+    },
+    "team": {
+      "title": "核心团队",
+      "subtitle": "专业的团队是我们最大的优势",
+      "members": [
+        {
+          "name": "张经理",
+          "position": "总经理",
+          "description": "拥有10年以上欧盟贸易经验",
+          "image": "/images/team/member1.jpg"
+        },
+        {
+          "name": "李顾问",
+          "position": "资深顾问",
+          "description": "前欧盟海关事务专��",
+          "image": "/images/team/member2.jpg"
+        },
+        {
+          "name": "王专员",
+          "position": "客户服务主管",
+          "description": "专注客户服务5年以上",
+          "image": "/images/team/member3.jpg"
+        }
+      ]
+    },
+    "cta": {
+      "title": "开始您的EORI注册之旅",
+      "subtitle": "让我们帮助您快速获取EORI号码"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "联系我们",
+      "phone": "+86 13482360085",
+      "email": "gm@leotech.site"
+    },
+    "links": {
+      "title": "快速链接",
+      "home": "首页",
+      "about": "关于我们",
+      "applyEORI": "立即申请"
+    },
+    "hours": {
+      "title": "工作时间",
+      "weekday": "周一至周五: 9:00-18:00",
+      "weekend": "周末: 休息"
+    },
+    "social": {
+      "title": "关注我们",
+      "wechat": "微信",
+      "linkedin": "领英"
+    },
+    "copyright": {
+      "company": "上海秉渔供应链管理有限公司",
+      "rights": "版权所有"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "登录",
+      "subtitle": "登录您的账户",
+      "email": "邮箱",
+      "password": "密码",
+      "submit": "登录",
+      "forgotPassword": "忘记密码？",
+      "noAccount": "还没有账户？",
+      "register": "立即注册"
+    },
+    "register": {
+      "title": "注册",
+      "subtitle": "创建您的账户",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "注册",
+      "hasAccount": "已有账户？",
+      "login": "立即登录"
+    },
+    "terms": {
+      "agree": "注册即表示您同意我们的",
+      "termsOfService": "服务条款",
+      "and": "和",
+      "privacyPolicy": "隐私政策"
+    }
+  },
+  "validation": {
+    "title": "EORI 验证",
+    "subtitle": "使用欧盟官方认证接口，快速准确验证 EORI 号码的有效性",
+    "placeholder": "请输入 EORI 号码",
+    "submit": "开始验证",
+    "validating": "验证中...",
+    "result": {
+      "title": "验证结果",
+      "eori": "EORI号码",
+      "status": "状态",
+      "name": "企业名称",
+      "address": "地址",
+      "country": "国家",
+      "valid": "有效",
+      "invalid": "无效",
+      "copy": "复制"
+    },
+    "error": {
+      "empty": "EORI号码不能为空",
+      "format": "EORI号码格式不正确",
+      "service": "验证服务暂时不可用，请稍后再试"
+    },
+    "features": {
+      "official": "官方认证",
+      "fast": "快速响应",
+      "secure": "安全可靠"
+    },
+    "hero": {
+      "title": "专业的 EORI 验证系统",
+      "subtitle": "助力跨境贸易",
+      "description": "使用欧盟官方认证接口，快速准确验证 EORI 号码的有效性，为您的跨境贸易保驾护航"
+    }
+  }
+} 
