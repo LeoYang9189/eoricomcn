@@ -29,6 +29,50 @@
       "submit": "Login",
       "failed": "Login failed",
       "error": "System error, please try again later"
+    },
+    "verify": {
+      "email": "Email Verification",
+      "phone": "Phone Verification"
+    },
+    "email": {
+      "label": "Email Address"
+    },
+    "phone": {
+      "label": "Phone Number"
+    },
+    "password": {
+      "label": "Password",
+      "confirm": "Confirm Password"
+    },
+    "verificationCode": {
+      "label": "Verification Code",
+      "send": "Send Code",
+      "sendFailed": "Failed to send code",
+      "invalid": "Invalid verification code"
+    },
+    "thirdParty": {
+      "title": "Or continue with",
+      "google": "Google",
+      "wechat": "WeChat",
+      "failed": "Third-party login failed"
+    },
+    "agreement": {
+      "text": "By signing up, you agree to our",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    },
+    "wechat": {
+      "title": "WeChat Login",
+      "tip": "Scan QR code with WeChat",
+      "scanning": "Scanned, please confirm on your phone",
+      "expired": "QR code expired",
+      "refresh": "Refresh QR Code",
+      "error": "Failed to get QR code",
+      "retry": "Retry"
+    },
+    "google": {
+      "failed": "Google login failed, please try again later"
     }
   },
   "home": {
@@ -135,6 +179,7 @@
       "title": "Quick Links",
       "home": "Home",
       "about": "About Us",
+      "applyEORI": "Apply Now",
       "apply": "Apply Now"
     },
     "hours": {
@@ -241,15 +286,16 @@
       "company": "Company Info",
       "contact": "Contact Info",
       "business": "Business Info",
-      "documents": "Documents"
+      "documents": "Documents",
+      "revisit": "Revisit"
     },
     "fields": {
-      "companyName": "Company Name",
+      "companyNameEn": "Company Name (in English)",
       "registrationNumber": "Registration No.",
       "vatNumber": "VAT Number",
-      "address": "Company Address",
-      "country": "Country/Region",
-      "city": "City",
+      "addressEn": "Company Address (in English)",
+      "country": "Country",
+      "region": "Region",
       "postalCode": "Postal Code",
       "contactName": "Contact Name",
       "contactPosition": "Position",
@@ -258,7 +304,17 @@
       "businessType": "Business Type",
       "importExportVolume": "Import/Export Volume",
       "mainProducts": "Main Products",
-      "targetCountries": "Target Countries"
+      "targetCountries": "Target Countries",
+      "selectCountry": "Select a country",
+      "regionPlaceholder": "Enter region",
+      "companyNameEnPlaceholder": "Enter company name in English",
+      "addressEnPlaceholder": "Enter address in English",
+      "postalCodePlaceholder": "Enter postal code",
+      "companyNameEnTip": "Must match the English name on business license",
+      "addressEnTip": "Please enter complete address including street name and number",
+      "searchCountry": "Search country (code or name)",
+      "establishDate": "Establishment Date",
+      "establishDatePlaceholder": "Select company establishment date"
     },
     "next": "Next",
     "back": "Back",

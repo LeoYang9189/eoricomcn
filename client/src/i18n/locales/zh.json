@@ -119,15 +119,17 @@
       "company": "公司信息",
       "contact": "联系人信息",
       "business": "业务信息",
-      "documents": "文件上传"
+      "documents": "文件上传",
+      "revisit": "返回修改"
     },
     "fields": {
-      "companyName": "公司名称",
+      "companyNameEn": "公司名称（英文全称）",
+      "establishDate": "成立时间",
       "registrationNumber": "注册号",
       "vatNumber": "增值税号",
-      "address": "公司地址",
-      "country": "国家/地区",
-      "city": "城市",
+      "addressEn": "公司地址（英文）",
+      "country": "国家",
+      "region": "地区",
       "postalCode": "邮政编码",
       "contactName": "联系人姓名",
       "contactPosition": "职",
@@ -136,7 +138,16 @@
       "businessType": "业务类型",
       "importExportVolume": "进出口规模",
       "mainProducts": "主要产品",
-      "targetCountries": "目标国家"
+      "targetCountries": "目标国家",
+      "selectCountry": "请选择国家",
+      "regionPlaceholder": "请输入地区",
+      "companyNameEnPlaceholder": "请输入公司英文全称",
+      "addressEnPlaceholder": "请输入英文地址",
+      "postalCodePlaceholder": "请输入邮政编码",
+      "companyNameEnTip": "请确保与营业执照上的英文名称一致",
+      "addressEnTip": "请输入完整的英文地址，包括街道、门牌号等信息",
+      "searchCountry": "搜索国家（支持代码、中英文名称）",
+      "establishDatePlaceholder": "请选择公司成立时间"
     },
     "next": "下一步",
     "back": "上一步",
@@ -230,7 +241,7 @@
       "intro": {
         "title": "公司介绍",
         "content": [
-          "我们是一家专注于EORI注册服务的专业机构，拥有多年的盟贸易服务经验。",
+          "我们是一家专注于EORI注册服务的专业机构，拥有多年的易服务经验。",
           "团队由资深的贸易专家和法律顾问组成，为数千家企业成功办理了EORI注册。",
           "我们始终秉持专业、高效、诚信的服务理念，致力于为客户提供最优质的服务体验。"
         ]
@@ -267,7 +278,7 @@
         {
           "name": "李顾问",
           "position": "资深顾问",
-          "description": "前欧盟海关事务专��",
+          "description": "前欧盟海关事务专",
           "image": "/images/team/member2.jpg"
         },
         {
@@ -293,7 +304,8 @@
       "title": "快速链接",
       "home": "首页",
       "about": "关于我们",
-      "applyEORI": "立即申请"
+      "applyEORI": "立即申请",
+      "apply": "立即申请"
     },
     "hours": {
       "title": "工作时间",
@@ -313,29 +325,62 @@
   "auth": {
     "login": {
       "title": "登录",
-      "subtitle": "登录您的账户",
-      "email": "邮箱",
-      "password": "密码",
       "submit": "登录",
-      "forgotPassword": "忘记密码？",
-      "noAccount": "还没有账户？",
+      "failed": "登录失败，请检查账号密码",
+      "noAccount": "还没有账号？",
       "register": "立即注册"
     },
     "register": {
       "title": "注册",
-      "subtitle": "创建您的账户",
-      "email": "邮箱",
-      "password": "密码",
-      "confirmPassword": "确认密码",
       "submit": "注册",
-      "hasAccount": "已有账户？",
+      "failed": "注册失败，请稍后重试",
+      "passwordMismatch": "两次输入的密码不一致",
+      "haveAccount": "已有账号？",
       "login": "立即登录"
     },
-    "terms": {
-      "agree": "注册即表示您同意我们的",
-      "termsOfService": "服务条款",
+    "verify": {
+      "email": "邮箱验证",
+      "phone": "手机验证"
+    },
+    "email": {
+      "label": "邮箱地址"
+    },
+    "phone": {
+      "label": "手机号码"
+    },
+    "password": {
+      "label": "密码",
+      "confirm": "确认密码"
+    },
+    "verificationCode": {
+      "label": "验证码",
+      "send": "发送验证码",
+      "sendFailed": "验证码发送失败",
+      "invalid": "验证码无效"
+    },
+    "thirdParty": {
+      "title": "其他登录方式",
+      "google": "谷歌账号登录",
+      "wechat": "微信扫码登录",
+      "failed": "第三方登录失败"
+    },
+    "agreement": {
+      "text": "注册即表示同意",
+      "terms": "服务条款",
       "and": "和",
-      "privacyPolicy": "隐私政策"
+      "privacy": "隐私政策"
+    },
+    "wechat": {
+      "title": "微信扫码登录",
+      "tip": "请使用微信扫描二维码登录",
+      "scanning": "扫描成功，请在手机上确认",
+      "expired": "二维码已过期",
+      "refresh": "刷新二维码",
+      "error": "获取二维码失败",
+      "retry": "重试"
+    },
+    "google": {
+      "failed": "谷歌登录失，请稍后重试"
     }
   },
   "validation": {

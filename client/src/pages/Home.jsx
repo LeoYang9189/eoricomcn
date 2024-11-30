@@ -193,10 +193,10 @@
                                                         {t('home.cta.subtitle')}
                                                         </p>
                                                         <Link
-                                                            to="/application"
+                                                            to="/auth"
                                                             className="inline-flex items-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-blue-600 transition-colors"
                                                         >
-                                                            {t('nav.applyEORI')}
+                                                            {t('home.cta.button')}
                                                         </Link>
                                                     </motion.div>
                                                     </div>

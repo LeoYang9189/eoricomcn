@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import StepProgress from '../components/StepProgress';
+import CountrySelect from '../components/CountrySelect';
+import DatePicker from '../components/DatePicker';
 
 export default function ApplicationForm() {
   const { t } = useTranslation();
-  const [step, setStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
     // 公司信息
-    companyName: '',
+    companyNameEn: '',
+    establishDate: '',
     registrationNumber: '',
     vatNumber: '',
-    address: '',
+    addressEn: '',
     country: '',
-    city: '',
+    region: '',
     postalCode: '',
     
     // 联系人信息
@@ -37,96 +39,63 @@ export default function ApplicationForm() {
   });
 
   // 步骤配置
+  const stepFields = {
+    0: ['companyNameEn', 'establishDate', 'addressEn', 'country', 'region', 'postalCode'],
+    1: ['contactName', 'contactPosition', 'contactEmail', 'contactPhone'],
+    2: ['businessType', 'importExportVolume', 'mainProducts', 'targetCountries'],
+    3: ['businessLicense', 'idCard', 'proofOfAddress', 'otherDocuments']
+  };
+
   const steps = [
-    {
-      key: 'company',
-      title: t('application.steps.company'),
-      fields: ['companyName', 'registrationNumber', 'vatNumber', 'address', 'country', 'city', 'postalCode']
-    },
-    {
-      key: 'contact',
-      title: t('application.steps.contact'),
-      fields: ['contactName', 'contactPosition', 'contactEmail', 'contactPhone']
-    },
-    {
-      key: 'business',
-      title: t('application.steps.business'),
-      fields: ['businessType', 'importExportVolume', 'mainProducts', 'targetCountries']
-    },
-    {
-      key: 'documents',
-      title: t('application.steps.documents'),
-      fields: ['businessLicense', 'idCard', 'proofOfAddress', 'otherDocuments']
-    }
+    t('application.steps.company'),
+    t('application.steps.contact'),
+    t('application.steps.business'),
+    t('application.steps.documents')
   ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (step < steps.length) {
-      setStep(step + 1);
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
       return;
     }
 
     // TODO: 实现表单提交逻辑
+    console.log('Form submitted:', formData);
   };
 
-  const renderStepIndicator = () => (
-    <div className="mb-8">
-      <div className="flex justify-between items-center">
-        {steps.map((s, index) => (
-          <div key={s.key} className="flex items-center">
-            <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                step >= index + 1 ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'
-              }`}
-            >
-              {index + 1}
-            </div>
-            {index < steps.length - 1 && (
-              <div
-                className={`w-24 h-1 ${
-                  step > index + 1 ? 'bg-blue-600' : 'bg-gray-200'
-                }`}
-              />
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-between mt-2">
-        {steps.map((s) => (
-          <span key={s.key} className="text-sm text-gray-600">{s.title}</span>
-        ))}
-      </div>
-    </div>
-  );
+  const handleStepClick = (stepIndex) => {
+    // 可以添加表单验证逻辑
+    setCurrentStep(stepIndex);
+  };
 
   const renderFormFields = () => {
-    const currentStep = steps[step - 1];
+    const fields = stepFields[currentStep];
+    
     return (
-      <div className="space-y-6">
-        {currentStep.fields.map((field) => (
-          <div key={field}>
-            <label className="block text-sm font-medium text-gray-700">
+      <div className="grid grid-cols-1 gap-8">
+        {fields.map((field) => (
+          <div key={field} className="space-y-2">
+            <label className="block text-base font-medium text-gray-900">
               {t(`application.fields.${field}`)}
             </label>
-            {field.includes('Documents') ? (
-              <input
-                type="file"
-                multiple={field === 'otherDocuments'}
-                onChange={(e) => {
-                  const files = field === 'otherDocuments' ? 
-                    Array.from(e.target.files) : 
-                    e.target.files[0];
-                  setFormData({ ...formData, [field]: files });
-                }}
-                className="mt-1 block w-full"
+            {field === 'country' ? (
+              <CountrySelect
+                value={formData[field]}
+                onChange={(value) => setFormData({ ...formData, [field]: value })}
+              />
+            ) : field === 'establishDate' ? (
+              <DatePicker
+                value={formData[field]}
+                onChange={(value) => setFormData({ ...formData, [field]: value })}
               />
             ) : (
               <input
-                type={field.includes('email') ? 'email' : field.includes('phone') ? 'tel' : 'text'}
-                value={formData[field] || ''}
+                type="text"
+                value={formData[field]}
                 onChange={(e) => setFormData({ ...formData, [field]: e.target.value })}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                placeholder={t(`application.fields.${field}Placeholder`)}
+                className="block w-full px-4 py-3 text-base rounded-lg border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow duration-200"
               />
             )}
           </div>
@@ -137,49 +106,45 @@ export default function ApplicationForm() {
 
   return (
     <Layout>
-      <SEO 
-        title={t('application.seo.title')}
-        description={t('application.seo.description')}
-        keywords={t('application.seo.keywords')}
-      />
-      <div className="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            {t('application.title')}
-          </h1>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h1 className="text-3xl font-bold text-gray-900 text-center mb-6">
+              {t('application.title')}
+            </h1>
+            <StepProgress 
+              steps={steps} 
+              currentStep={currentStep} 
+              onStepClick={handleStepClick}
+            />
+          </div>
           
-          {renderStepIndicator()}
-
-          <div className="bg-white shadow rounded-lg p-6 mb-6">
-            <form onSubmit={handleSubmit}>
+          <div className="bg-white shadow-lg rounded-xl p-8">
+            <form onSubmit={handleSubmit} className="space-y-8">
               {renderFormFields()}
 
-              <div className="mt-6 flex justify-between">
-                {step > 1 && (
+              <div className="flex items-center justify-between pt-6 border-t border-gray-200">
+                {currentStep > 0 && (
                   <button
                     type="button"
-                    onClick={() => setStep(step - 1)}
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                    onClick={() => setCurrentStep(currentStep - 1)}
+                    className="inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
                   >
                     {t('application.back')}
                   </button>
                 )}
                 <button
                   type="submit"
-                  className={`ml-auto inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 ${
-                    step === 1 ? 'ml-0' : ''
+                  className={`inline-flex items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200 ${
+                    currentStep === 0 ? 'ml-auto' : ''
                   }`}
                 >
-                  {step === steps.length ? t('application.submit') : t('application.next')}
+                  {currentStep === steps.length - 1 ? t('application.submit') : t('application.next')}
                 </button>
               </div>
             </form>
           </div>
-        </motion.div>
+        </div>
       </div>
     </Layout>
   );

@@ -1,6 +1,8 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import eoriRouter from './routes/eori.js';
+import countriesRouter from './routes/countries.js';
+import pool from './config/db.js';
 
 const app = express();
 
@@ -23,7 +25,7 @@ app.use(cors({
 app.use(express.json());
 
 // 路由
-app.use('/api/eori', eoriRouter);
+app.use('/api/countries', countriesRouter);
 
 // 404 处理
 app.use((req, res) => {
@@ -35,20 +37,8 @@ app.use((req, res) => {
 
 // 错误处理
 app.use((err, req, res, next) => {
-  console.error('服务器错误:', {
-    message: err.message,
-    stack: err.stack,
-    url: req.url,
-    method: req.method,
-    body: req.body
-  });
-
-  res.status(500).json({
-    valid: false,
-    message: process.env.NODE_ENV === 'production'
-      ? '服务器内部错误'
-      : err.message
-  });
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something broke!' });
 });
 
 export default app; 
