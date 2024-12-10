@@ -1,6 +1,5 @@
 import mysql from 'mysql2/promise';
 import { Pool } from '@neondatabase/serverless';
-import { parse } from 'url';
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -24,19 +23,5 @@ if (isDev) {
     connectionString: process.env.DATABASE_URL
   });
 }
-
-// 测试连接
-const testConnection = async () => {
-  try {
-    const connection = await pool.getConnection();
-    console.log('Successfully connected to the database.');
-    connection.release();
-  } catch (err) {
-    console.error('Database connection failed:', err);
-    process.exit(1);
-  }
-};
-
-testConnection();
 
 export default pool; 
