@@ -12,7 +12,7 @@ export default function Layout({ children }) {
       <nav className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-8 animate-fade-in">
               <Logo />
               <div className="hidden md:flex items-center space-x-8">
                 <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium">
@@ -35,7 +35,7 @@ export default function Layout({ children }) {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 animate-fade-in">
               <Link
                 to="/auth"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
@@ -49,12 +49,12 @@ export default function Layout({ children }) {
       </nav>
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow animate-fade-in">
         {children}
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white">
+      <footer className="bg-gray-800 text-white animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>

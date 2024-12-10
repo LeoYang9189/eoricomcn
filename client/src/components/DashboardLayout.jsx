@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 
 const navigation = [
   { 
@@ -102,12 +101,7 @@ export default function DashboardLayout({ children }) {
         
         {/* 移动端菜单 */}
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-blue-700 pt-16"
-          >
+          <div className="fixed inset-0 z-40 bg-blue-700 pt-16 animate-fade-in">
             <nav className="px-4 py-2">
               {navigation.map((item) => (
                 <Link
@@ -118,7 +112,7 @@ export default function DashboardLayout({ children }) {
                     location.pathname === item.path
                       ? 'bg-blue-800 text-white'
                       : 'text-blue-100 hover:bg-blue-600'
-                  } group flex items-center px-2 py-2 text-base font-medium rounded-md mb-2`}
+                  } group flex items-center px-2 py-2 text-base font-medium rounded-md mb-2 animate-fade-in-left`}
                 >
                   {item.icon}
                   <span className="ml-3">{t(item.name)}</span>
@@ -126,7 +120,7 @@ export default function DashboardLayout({ children }) {
               ))}
               <button
                 onClick={handleLogout}
-                className="w-full flex items-center px-2 py-2 text-base font-medium rounded-md text-blue-100 hover:bg-blue-600"
+                className="w-full flex items-center px-2 py-2 text-base font-medium rounded-md text-blue-100 hover:bg-blue-600 animate-fade-in-left"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
@@ -134,7 +128,7 @@ export default function DashboardLayout({ children }) {
                 <span className="ml-3">{t('dashboard.nav.logout')}</span>
               </button>
             </nav>
-          </motion.div>
+          </div>
         )}
       </div>
 
@@ -142,7 +136,7 @@ export default function DashboardLayout({ children }) {
       <div className="md:pl-64 flex flex-col flex-1">
         <main className="flex-1">
           <div className="py-6">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 animate-fade-in">
               {children}
             </div>
           </div>

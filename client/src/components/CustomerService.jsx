@@ -59,7 +59,7 @@ export default function CustomerService() {
   return (
     <div
       ref={containerRef}
-      className={`fixed ${position.y} ${position.x} z-50 bg-white rounded-[36px] shadow-xl p-4 cursor-move select-none`}
+      className={`fixed ${position.y} ${position.x} z-50 bg-white rounded-[36px] shadow-xl p-4 cursor-move select-none animate-fade-in`}
       onMouseDown={handleMouseDown}
       style={{ touchAction: 'none' }}
     >
@@ -68,7 +68,7 @@ export default function CustomerService() {
           {/* Email */}
           <div className="relative group">
             <button
-              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md hover:bg-blue-700 transition-colors cursor-pointer"
+              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md hover:bg-blue-700 transition-colors cursor-pointer animate-fade-in"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -88,7 +88,7 @@ export default function CustomerService() {
           {/* Phone */}
           <div className="relative group">
             <button
-              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md hover:bg-blue-700 transition-colors cursor-pointer"
+              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md hover:bg-blue-700 transition-colors cursor-pointer animate-fade-in delay-100"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -103,7 +103,7 @@ export default function CustomerService() {
           {/* WeChat */}
           <div className="relative group">
             <button
-              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md hover:bg-blue-700 transition-colors cursor-pointer"
+              className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md hover:bg-blue-700 transition-colors cursor-pointer animate-fade-in delay-200"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8.2 13.3c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9m4.1 0c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9m3.9 5.3c-.8 0-1.5-.2-2.2-.5-.2-.1-.5-.1-.7 0l-1.5.8c-.9-.7-1.7-1.5-2.3-2.4l.8-1.5c.1-.2.1-.5 0-.7-.3-.7-.5-1.4-.5-2.2 0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5m0-12.5c-3.9 0-7 3.1-7 7 0 1.1.2 2.1.7 3l-1.1 2.1c-.1.2-.1.5.1.7.1.1.3.2.4.2.1 0 .2 0 .3-.1l2.1-1.1c.9.5 2 .7 3 .7 3.9 0 7-3.1 7-7s-3.1-7-7-7" />
