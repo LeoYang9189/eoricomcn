@@ -5,13 +5,13 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['framer-motion'],
+      external: [],
     },
   },
   optimizeDeps: {
-    include: ['framer-motion']
+    include: []
   },
   resolve: {
-    dedupe: ['framer-motion']
+    dedupe: ['react']
   }
 }); 
