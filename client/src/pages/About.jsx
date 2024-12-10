@@ -1,46 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
-// 装饰性背景组件
-const DecorativeBackground = () => (
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute -top-1/2 -right-1/2 w-[200%] h-[200%] bg-gradient-to-br from-blue-50 via-white to-blue-50 rounded-full opacity-70" />
-    <div className="absolute inset-0 bg-grid-blue-500/[0.03]" />
-  </div>
-);
-
-// 替换 heroicons 导入为自定义图标组件
-const CustomIcons = {
-  UserGroupIcon: () => (
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-  ),
-  ClockIcon: () => (
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  ),
-  ChartBarIcon: () => (
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-    </svg>
-  )
-};
-
 export default function About() {
   const { t } = useTranslation();
-
-  // 在组件中使用自定义图标
-  const advantageIcons = {
-    'professional': CustomIcons.UserGroupIcon,
-    'fast': CustomIcons.ClockIcon,
-    'tracking': CustomIcons.ChartBarIcon
-  };
 
   return (
     <Layout>
@@ -51,166 +15,81 @@ export default function About() {
         path="/about"
       />
 
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <DecorativeBackground />
-        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl mb-6">
-              {t('about.company.title')}
+      <div className="bg-gradient-to-b from-blue-50 to-white">
+        {/* Hero Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div className="text-center animate-fade-in-up">
+            <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              {t('about.hero.title')}
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about.company.subtitle')}
+            <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-500">
+              {t('about.hero.subtitle')}
             </p>
-          </motion.div>
+          </div>
         </div>
-      </div>
 
-      {/* 公司介绍 */}
-      <div className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-slate-50/[0.03]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              {t('about.company.intro.title')}
-            </h2>
-            <div className="space-y-8">
-              {t('about.company.intro.content', { returnObjects: true }).map((paragraph, index) => (
-                <motion.p
+        {/* 公司介绍 */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in-left">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                {t('about.company.title')}
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                {t('about.company.description')}
+              </p>
+              <ul className="space-y-4">
+                {t('about.company.features', { returnObjects: true }).map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <svg className="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-600">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="animate-fade-in-right">
+              <img 
+                src="/images/eu-map.svg" 
+                alt="EU Map" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* 团队介绍 */}
+        <div className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 animate-fade-in-up">
+              <h2 className="text-3xl font-bold text-gray-900">
+                {t('about.team.title')}
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                {t('about.team.subtitle')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {t('about.team.members', { returnObjects: true }).map((member, index) => (
+                <div 
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-lg text-gray-600 leading-relaxed"
+                  className="bg-white rounded-lg shadow-lg p-6 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {paragraph}
-                </motion.p>
+                  <div className="text-center">
+                    <div className="h-24 w-24 rounded-full bg-blue-100 mx-auto mb-4 flex items-center justify-center">
+                      <svg className="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-medium text-gray-900">{member.name}</h3>
+                    <p className="text-sm text-gray-500">{member.role}</p>
+                  </div>
+                </div>
               ))}
             </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* 服务优势 */}
-      <div className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-grid-slate-50/[0.03]" />
-          <div className="absolute top-0 inset-x-0 h-48 bg-gradient-to-b from-white" />
-          <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-white" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {t('about.advantages.title')}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('about.advantages.subtitle')}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {t('about.advantages.items', { returnObjects: true }).map((item, index) => {
-              const Icon = advantageIcons[item.icon] || CustomIcons.UserGroupIcon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </motion.div>
-              );
-            })}
           </div>
-        </div>
-      </div>
-
-      {/* 团队介绍 */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900">
-              {t('about.team.title')}
-            </h2>
-            <p className="mt-4 text-xl text-gray-600">
-              {t('about.team.subtitle')}
-            </p>
-          </motion.div>
-
-          <div className="mt-12 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            {t('about.team.members', { returnObjects: true }).map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="relative">
-                  <img
-                    className="w-48 h-48 rounded-full mx-auto object-cover"
-                    src={member.image}
-                    alt={member.name}
-                  />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-600/20 to-transparent" />
-                </div>
-                <div className="mt-6">
-                  <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                  <p className="text-blue-600">{member.position}</p>
-                  <p className="mt-2 text-gray-600">{member.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-grid-white/[0.05]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50" />
-        </div>
-        <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              {t('about.cta.title')}
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              {t('about.cta.subtitle')}
-            </p>
-          </motion.div>
         </div>
       </div>
     </Layout>
