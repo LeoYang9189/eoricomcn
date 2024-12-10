@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import { validateEORI } from '../services/eoriValidation';
 
+export default function Validation() {
+  const { t } = useTranslation();
+  const [eoriNumber, setEoriNumber] = useState('');
+  const [validationResult, setValidationResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const response = await fetch('/api/eori/validate', {
+        method: 'POST',
+        headers: {
 // 动画配置
 const containerVariants = {
   hidden: { opacity: 0 },
