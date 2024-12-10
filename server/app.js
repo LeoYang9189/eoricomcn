@@ -20,10 +20,10 @@ app.use((req, res, next) => {
 // CORS 配置
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-domain.com'
-    : '*',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
+    ? ['https://eoricomcn.vercel.app', 'https://www.eoricom.cn']
+    : process.env.CORS_ORIGIN,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // 解析 JSON

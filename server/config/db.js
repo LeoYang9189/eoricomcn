@@ -20,10 +20,8 @@ if (isDev) {
   });
 } else {
   // 生产环境使用 Neon Serverless
-  const { hostname, username, password, pathname } = parse(process.env.DATABASE_URL);
   pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true
+    connectionString: process.env.DATABASE_URL
   });
 }
 
