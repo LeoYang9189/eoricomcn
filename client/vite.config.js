@@ -13,5 +13,8 @@ export default defineConfig({
   },
   resolve: {
     dedupe: ['react']
+  },
+  css: {
+    postcss: './postcss.config.js'
   }
 }); 
