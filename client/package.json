@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.8",
+    "framer-motion": "^11.0.8",
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
     "react": "^18.2.0",
@@ -17,7 +18,9 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^2.0.5",
     "react-i18next": "^14.0.0",
-    "react-router-dom": "^6.21.0"
+    "react-router-dom": "^6.21.0",
+    "date-fns": "^3.3.1",
+    "react-datepicker": "^7.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
