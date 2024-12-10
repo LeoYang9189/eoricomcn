@@ -15,6 +15,13 @@ export default defineConfig({
     dedupe: ['react']
   },
   css: {
-    postcss: './postcss.config.js'
+    postcss: {
+      plugins: {
+        tailwindcss: {
+          config: './tailwind.config.cjs'
+        },
+        autoprefixer: {}
+      }
+    }
   }
 }); 
